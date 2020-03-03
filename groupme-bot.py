@@ -35,7 +35,7 @@ class errcol:
 DEBUG = (True if os.getenv('BOT_DEBUG') == 'True' else False)
 POST_TO = 'https://api.groupme.com/v3/bots/post'
 GROUP_RULES = {}
-BOT_INFO = {'54932069,28701d676748cd0ce4a10ab00f,FlowBot'}
+BOT_INFO = []
 
 if DEBUG:
     print(errcol.debug + "Web concurrency is set to " + os.getenv('WEB_CONCURRENCY') + errcol.tail)
