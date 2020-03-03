@@ -2,7 +2,7 @@ import urllib.request, json
 
 def run(data, bot_info, send):
 
-    help_message = "Help:\n.help  -->  This screen\n.test  -->  Try it!\nOtherwise, repeats your message."
+    help_message = "Help:\n.help  -->  This screen\n.flow  -->  Provides current flow of river!\nMight add weather / water temp later."
 
     message = data['text']
 
@@ -10,7 +10,7 @@ def run(data, bot_info, send):
         send(help_message, bot_info[0])
         return True
 
-    if message == '.test':
+    if message == '.flow':
 
         send(getFlow(), bot_info[0])
         return True
