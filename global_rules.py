@@ -29,7 +29,7 @@ def getFlow():
     with urllib.request.urlopen( "https://waterservices.usgs.gov/nwis/iv/?&sites=06891080&parameterCd=00060&format=json") as url2:
         data_lfk = json.loads(url2.read().decode())
         flow_lfk = data_lfk["value"]["timeSeries"][0]["values"][0]["value"][0]["value"]
-        sentence_lfk = "Lawrence: "+ flow_lfk
+        sentence_lfk = "Lawrence: "+ flow_lfk + " "
         # print(sentence_lfk)
     final = sentence_lfk + sentence_lcn
     return final
