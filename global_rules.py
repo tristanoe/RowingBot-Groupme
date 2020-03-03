@@ -36,7 +36,7 @@ def getFlow():
     # return flow_lcn, flow_lfk
     
 def getTemp():
-   with urllib.request.urlopen("") as url:
-       data_temp = json.loads(url.read().decode())
-       temp_temp = data_temp["value"]["timeSeries"][0]["values"][0]["value"][0]["value"]
-       return temp_temp
+    with urllib.request.urlopen("") as url:
+        data_temp = json.loads(url.read().decode())
+        temp_temp = data_temp["value"]["timeSeries"][0]["values"][0]["value"][0]["value"]
+    return temp_temp
