@@ -41,6 +41,6 @@ def getTemp():
     with urllib.request.urlopen("https://waterservices.usgs.gov/nwis/iv/?&sites=06892350&parameterCd=00010&format=json") as url:
         data_temp = json.loads(url.read().decode())
         water_temp = data_temp["value"]["timeSeries"][0]["values"][1]["value"][0]["value"]
-        Decimal_water = Decimal(water_temp)
-        final_water = (Decimal_water * 9/5 ) + 32
+        # Decimal_water = Decimal(water_temp)
+        final_water = (water_temp * 9/5 ) + 32
     return final_water
