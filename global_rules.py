@@ -38,5 +38,5 @@ def getFlow():
 def getTemp():
     with urllib.request.urlopen("https://waterservices.usgs.gov/nwis/iv/?&sites=06892350&parameterCd=00010&format=json") as url:
         data_temp = json.loads(url.read().decode())
-        temp_temp = data_temp["value"]["timeSeries"][0]["values"][0]["value"][0]["value"]
+        temp_temp = data_temp["value"]["timeSeries"][0]["values"][1]["value"][0]["value"]
     return temp_temp
