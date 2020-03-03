@@ -2,8 +2,8 @@ import urllib.request, json
 from decimal import Decimal
 
 def run(data, bot_info, send):
-    help_message2 = "\nApril 4th;\n    Wichita: Duel\nApril 26th;\n    Michigan: MACRA\nMay 3rd;\n     Wichita: PACRA\nMay 22-24th;\n    Georgia: ACRA"
-    help_message = "//// Announcements ////\nSpring Break;\n    March 6th: 6am & 3pm\n    March 7-11th: 7:30am & 3pm\nMarch 18-19th; Ergathon\nMarch 21st; Elections after practice\n\n.flow -> Rowing info\n" + getTemp() + help_message2
+    help_message2 = "April 4th; Wichita: Duel\nApril 26th; Michigan: MACRA\nMay 3rd; Wichita: PACRA\nMay 22-24th; Georgia: ACRA\n\n.flow -> Rowing info"
+    help_message = "//// Announcements ////\nSpring Break;\n    March 6th: 6am & 3pm\n    March 7-11th: 7:30am & 3pm\n\nMarch 18-19th; Ergathon\nMarch 21st; Elections after practice\n\n" + help_message2
 
     
     message = data['text']
@@ -14,7 +14,7 @@ def run(data, bot_info, send):
 
     if message == '.flow':
 
-        send(getFlow(), bot_info[0])
+        send(getFlow()+getTemp(), bot_info[0])
         return True
 
     # send("Hi {}! You said: {}".format(data['name'], data['text']), bot_info[0])
@@ -43,5 +43,6 @@ def getTemp():
         water_temp = data_temp["value"]["timeSeries"][0]["values"][1]["value"][0]["value"]
         Decimal_water = Decimal(water_temp)
         final_water = (Decimal_water * 9/5 ) + 32
-    return str(final_water)
+    sentence_temp = "\nWater Temp: " + str(final_water)
+    return sentence_temp
 
