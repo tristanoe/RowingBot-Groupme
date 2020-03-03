@@ -33,8 +33,8 @@ def getFlow():
         flow_lfk = data_lfk["value"]["timeSeries"][0]["values"][0]["value"][0]["value"]
         sentence_lfk = "Lawrence: "+ flow_lfk + " "
         # print(sentence_lfk)
-    final = sentence_lfk + sentence_lcn
-    return final
+    final = sentence_lfk + sentence_lcn+"\nAverage: \n"
+    return final+(int(flow_lcn) + int(flow_lfk))/2
     # return flow_lcn, flow_lfk
     
 def getTemp():
