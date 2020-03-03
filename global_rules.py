@@ -1,8 +1,9 @@
 import urllib.request, json
+from decimal import Decimal
 
 def run(data, bot_info, send):
 
-    help_message = "//// Announcements ////\nSpring Break;\n    March 6th: 6-8am & 3-6pm\n    March 7-11th: 7:30-9:30am & 3-6pm\nMarch 18-19th; Ergathon\nMarch 21st; Elections after practice\n\n.flow -> Rowing info\n" + getTemp()
+    help_message = "//// Announcements ////\nSpring Break;\n    March 6th: 6am & 3pm\n    March 7-11th: 7:30am & 3pm\nMarch 18-19th; Ergathon\nMarch 21st; Elections after practice\n\n.flow -> Rowing info\n" + getTemp()
 
     message = data['text']
 
@@ -38,5 +39,7 @@ def getFlow():
 def getTemp():
     with urllib.request.urlopen("https://waterservices.usgs.gov/nwis/iv/?&sites=06892350&parameterCd=00010&format=json") as url:
         data_temp = json.loads(url.read().decode())
-        temp_temp = data_temp["value"]["timeSeries"][0]["values"][1]["value"][0]["value"]
-    return temp_temp
+        water_temp = data_temp["value"]["timeSeries"][0]["values"][1]["value"][0]["value"]
+        Decimal_water = Decimal(water_temp)
+        final_water = (Decimal_water * 9/5 ) + 32
+    return final_water
