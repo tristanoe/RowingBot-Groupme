@@ -49,7 +49,7 @@ for bot in (os.getenv('BOT_INFO')).split('; '):
 
 # When you create global rules for the bot, they will be imported here.
 try:
-    GLOBAL_RULES = __import__('global_rules') #TODO Change to importlib.import_module
+    GLOBAL_RULES = importlib.import_module('global_rules') #TODO Change to __import__
     print(errcol.ok + "Global rules found and added." + errcol.tail)
 except ImportError:
     print(errcol.warn + "Global rules not found. Bot may load, but it won't do anything." + errcol.tail)
@@ -57,7 +57,7 @@ except ImportError:
 # When you create custom rules for a group, they will be imported here.
 for group in BOT_INFO:
     try:
-        GROUP_RULES[group] = __import__('group_{}'.format(group)) #TODO Change to importlib.import_module
+        GROUP_RULES[group] = importlib.import_module('group_{}'.format(group)) #TODO Change to __import__
         print(errcol.ok + "Group rules found and added for [G:{}]".format(group) + errcol.tail)
     except ImportError:
         if group in GROUP_RULES: del GROUP_RULES[group]
