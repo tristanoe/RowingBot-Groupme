@@ -23,13 +23,13 @@ def getFlow():
     with urllib.request.urlopen("https://waterservices.usgs.gov/nwis/iv/?&sites=06891000&parameterCd=00060&format=json") as url:
         data_lcn = json.loads(url.read().decode())
         flow_lcn = data_lcn["value"]["timeSeries"][0]["values"][0]["value"][0]["value"]
-        sentence_lcn = "Kansas River at Lecompton: "+ flow_lcn+'\n'
+        sentence_lcn = "Lecompton: "+ flow_lcn
         # print(sentence_lcn)
 
     with urllib.request.urlopen( "https://waterservices.usgs.gov/nwis/iv/?&sites=06891080&parameterCd=00060&format=json") as url2:
         data_lfk = json.loads(url2.read().decode())
         flow_lfk = data_lfk["value"]["timeSeries"][0]["values"][0]["value"][0]["value"]
-        sentence_lfk = "Kansas River at Lawrence: "+ flow_lfk
+        sentence_lfk = "Lawrence: "+ flow_lfk
         # print(sentence_lfk)
     final = sentence_lfk + sentence_lcn
     return final
