@@ -1,1 +1,1 @@
-web: gunicorn groupme-bot:app --preload
+web: gunicorn groupme-bot:app --preload --log-file=-
