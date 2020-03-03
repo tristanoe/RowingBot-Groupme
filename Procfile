@@ -1,1 +1,1 @@
-web: gunicorn groupme-bot:app
+web: gunicorn groupme-bot:app --preload
