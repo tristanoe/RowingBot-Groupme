@@ -45,6 +45,7 @@ if DEBUG:
 # Parses bot data from the environment into the format { group_id : [bot_id, bot_name] }
 for bot in (os.getenv('BOT_INFO')).split('; '):
     info = bot.split(', ')
+    print(info)
     BOT_INFO[info[0]] = (info[1], info[2])
 
 # When you create global rules for the bot, they will be imported here.
