@@ -43,5 +43,5 @@ def getTemp():
         water_temp = data_temp["value"]["timeSeries"][0]["values"][1]["value"][0]["value"]
         Decimal_water = Decimal(water_temp)
         final_water = (Decimal_water * 9/5 ) + 32
-        str(final_water)
-    return final_water
+     return str(final_water)
+
