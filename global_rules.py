@@ -15,7 +15,7 @@ def run(data, bot_info, send):
         send(getFlow(), bot_info[0])
         return True
 
-    send("Hi {}! You said: {}".format(data['name'], data['text']), bot_info[0])
+    # send("Hi {}! You said: {}".format(data['name'], data['text']), bot_info[0])
     return True
 
 def getFlow():
