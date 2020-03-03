@@ -34,7 +34,7 @@ def getFlow():
         sentence_lfk = "Lawrence: "+ flow_lfk + " "
         # print(sentence_lfk)
     final = sentence_lfk + sentence_lcn+"\nAverage: \n"
-    return final+(int(flow_lcn) + int(flow_lfk))/2
+    return final+str((int(flow_lcn) + int(flow_lfk))/2)
     # return flow_lcn, flow_lfk
     
 def getTemp():
