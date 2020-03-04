@@ -43,6 +43,14 @@ def getTemp():
         water_temp = data_temp["value"]["timeSeries"][0]["values"][1]["value"][0]["value"]
         Decimal_water = Decimal(water_temp)
         final_water = (Decimal_water * 9/5 ) + 32
+        
     sentence_temp = "\nWater Temp: " + str(final_water)
-    return sentence_temp
-
+    # return sentence_temp
+            
+    with urllib.request.urlopen("https://openweathermap.org/data/2.5/weather lat=38.9806&lon=-95.2429&appid=b6907d289e10d714a6e88b30761fae22&units=imperial") as url2:
+        data_temp2 = json.loads(url.read().decode())
+        air_temp = data_temp2["main"][0]["temp"]
+        wind = data_temp2["wind"][0]["speed"]
+    sentence_wind = "\n"+str(air_temp) + " " + str(wind)
+    return sentence_temp + sentence_wind
+        
