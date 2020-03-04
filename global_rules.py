@@ -1,6 +1,6 @@
 import urllib.request, json
 from decimal import Decimal
-
+import clock
  
 
 def run(data, bot_info, send):
@@ -19,7 +19,7 @@ def run(data, bot_info, send):
         send(getFlow()+getTemp(), bot_info[0])
         return True
 
-    # send("Hi {}! You said: {}".format(data['name'], data['text']), bot_info[0])
+    send(clock.timed_job(), bot_info[0])
     return True
 
 def getFlow():
