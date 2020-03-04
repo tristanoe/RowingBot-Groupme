@@ -1,19 +1,7 @@
 import urllib.request, json
 from decimal import Decimal
-from apscheduler.schedulers.blocking import Blocking Scheduler
 
-    
-sched = BlockingScheduler()
-@sched.scheduled_job('interval', minutes = 1)
-def timed_job():
-    print('This job is running every minute')
-@sched.scheduled_job('cron', day_of_week='mon-fri', hour=1, minute=30):
-def scheduled_job():
-    print('this job is running every day at 1:30')
-
-sched.start()
-    
-
+ 
 
 def run(data, bot_info, send):
     help_message2 = "April 4th; Wichita: Duel\nApril 26th; Michigan: MACRA\nMay 3rd; Wichita: PACRA\nMay 22-24th; Georgia: ACRA\n\n.flow -> Rowing info"
