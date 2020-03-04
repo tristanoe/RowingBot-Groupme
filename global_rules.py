@@ -48,7 +48,7 @@ def getTemp():
     # return sentence_temp
             
     with urllib.request.urlopen("https://openweathermap.org/data/2.5/weather?lat=38.9806&lon=-95.2429&appid=b6907d289e10d714a6e88b30761fae22&units=imperial") as url2:
-        data_temp2 = json.loads(url.read().decode())
+        data_temp2 = json.loads(url2.read().decode())
         air_temp = data_temp2["main"][0]["temp"]
         wind = data_temp2["wind"][0]["speed"]
     sentence_wind = "\n"+str(air_temp) + " " + str(wind)
