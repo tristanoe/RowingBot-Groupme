@@ -31,7 +31,7 @@ def getFlow():
     with urllib.request.urlopen( "https://waterservices.usgs.gov/nwis/iv/?&sites=06891080&parameterCd=00060&format=json") as url2:
         data_lfk = json.loads(url2.read().decode())
         flow_lfk = data_lfk["value"]["timeSeries"][0]["values"][0]["value"][0]["value"]
-        sentence_lfk = "Lawrence: "+ flow_lfk + " "
+        sentence_lfk = "Lawrence: "+ flow_lfk + ", "
         # print(sentence_lfk)
     final = sentence_lfk + sentence_lcn+"\nAverage: "
     return final+str(int((int(flow_lcn) + int(flow_lfk))/2))
@@ -44,13 +44,13 @@ def getTemp():
         Decimal_water = Decimal(water_temp)
         final_water = (Decimal_water * 9/5 ) + 32
         
-    sentence_temp = "\nWater Temp: " + str(final_water)
+    sentence_temp = "\nWater Temp: " + str(final_water) + " F"
     # return sentence_temp
             
     with urllib.request.urlopen("https://openweathermap.org/data/2.5/weather?lat=38.9806&lon=-95.2429&appid=b6907d289e10d714a6e88b30761fae22&units=imperial") as url2:
         data_temp2 = json.loads(url2.read().decode())
         air_temp = str(data_temp2["main"]["temp"]) + " F"
         wind = str(data_temp2["wind"]["speed"]) + " mph"
-    sentence_wind = "\nAir Temp: "+ air_temp + "\nWind Speed: " + wind
+    sentence_wind = "\nAir Temp:    "+ air_temp + "\nWind Speed: " + wind
     return sentence_temp + sentence_wind
         
