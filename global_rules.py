@@ -1,6 +1,6 @@
 import urllib.request, json
 from decimal import Decimal
-from apscheduler.schedulers.blocking import Blocking Scheduler
+from apscheduler.schedulers.blocking import BlockingScheduler
 
 sched = BlockingScheduler()
 @sched.scheduled_job('interval', minutes = 1)
