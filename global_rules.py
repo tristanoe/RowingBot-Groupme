@@ -51,6 +51,6 @@ def getTemp():
         data_temp2 = json.loads(url2.read().decode())
         air_temp = str(data_temp2["main"]["temp"]) + " F"
         wind = str(data_temp2["wind"]["speed"]) + " mph"
-    sentence_wind = "\n"+str(air_temp) + " " + str(wind)
+    sentence_wind = "\nAir Temp: "+ air_temp + "\nWind Speed: " + wind
     return sentence_temp + sentence_wind
         
