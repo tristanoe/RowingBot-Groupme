@@ -94,7 +94,7 @@ def getTemp():
         elif deg_wind > 326.25 and deg_wind < 348.75:
             direction = " NNW"
         else:
-            direction = " ?
+            direction = str(deg_wind) + " degrees"
 
         
     sentence_wind = "\nAir Temp:      "+ air_temp + "\nWind Speed: " + wind + direction
