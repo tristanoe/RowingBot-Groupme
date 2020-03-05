@@ -52,7 +52,11 @@ def getTemp():
     with urllib.request.urlopen("https://openweathermap.org/data/2.5/weather?lat=38.9806&lon=-95.2429&appid=b6907d289e10d714a6e88b30761fae22&units=imperial") as url2:
         data_temp2 = json.loads(url2.read().decode())
         air_temp = str(data_temp2["main"]["temp"]) + " F"
-        wind = str(data_temp2["wind"]["speed"]) + " mph"
-    sentence_wind = "\nAir Temp:      "+ air_temp + "\nWind Speed: " + wind
+        wind = data_temp2["wind"]["speed"] # + " mph"\
+        dir_wind = data_temp2["wind"]["deg"]
+        if(275 < dir_wind < 350):
+            dir_wind = " it works"
+        
+    sentence_wind = "\nAir Temp:      "+ air_temp + "\nWind Speed: " + wind + dir_wind
     return sentence_temp + sentence_wind
  
