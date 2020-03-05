@@ -7,7 +7,7 @@ def run(data, bot_info, send):
     help_message2 = "April 4th; Wichita: Duel\nApril 26th; Michigan: MACRA\nMay 3rd; Wichita: PACRA\nMay 22-24th; Georgia: ACRA\n\n.flow -> Rowing info"
     help_message = "Announcements\n------------------\nSpring Break;\n    March 6th: 6am & 3pm\n    March 7-11th: 7:30am & 3pm\n\nMarch 18-19th; Ergathon\nMarch 21st; Elections after practice\n\n" + help_message2
 
-    image = data['image']
+    #image = data['image']
     message = data['text']
 
     if message == '.help':
