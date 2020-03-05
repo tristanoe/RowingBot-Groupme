@@ -57,6 +57,6 @@ def getTemp():
         if(275 < dir_wind < 350):
             dir_wind = " it works"
         
-    sentence_wind = "\nAir Temp:      "+ air_temp + "\nWind Speed: " + wind + dir_wind
+    sentence_wind = "\nAir Temp:      "+ air_temp + "\nWind Speed: " + wind + str(dir_wind)
     return sentence_temp + sentence_wind
  
