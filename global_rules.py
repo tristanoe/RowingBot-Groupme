@@ -62,36 +62,36 @@ def getTemp():
         
         if deg_wind < 11.25 or ddeg_wind > 248.75:
             direction = " N"
-        else if deg_wind > 11.25 and deg_wind < 33.75:
+        elif deg_wind > 11.25 and deg_wind < 33.75:
             direction = " NNE"
-        else if deg_wind > 33.75 and deg_wind < 56.25:
+        elif deg_wind > 33.75 and deg_wind < 56.25:
             direction = " NE"
-        else if deg_wind > 56.25 and deg_wind < 78.75:
+        elif deg_wind > 56.25 and deg_wind < 78.75:
             direction = " ENE"
-        else if deg_wind > 78.75 and deg_wind < 101.25:
+        elif deg_wind > 78.75 and deg_wind < 101.25:
             direction = " E"
-        else if deg_wind > 101.25 and deg_wind < 123.75:
+        elif deg_wind > 101.25 and deg_wind < 123.75:
             direction = " ESE"
-        else if deg_wind > 123.75 and deg_wind < 146.25:
+        elif deg_wind > 123.75 and deg_wind < 146.25:
             direction = " SE"
-        else if deg_wind > 146.25 and deg_wind < 168.75:
+        elif deg_wind > 146.25 and deg_wind < 168.75:
             direction = " SSE"
-        else if deg_wind > 168.75 and deg_wind < 191.25:
+        elif deg_wind > 168.75 and deg_wind < 191.25:
             direction = " S"
   
-        else if deg_wind > 191.25 and deg_wind < 213.75:
+        elif deg_wind > 191.25 and deg_wind < 213.75:
             direction = " SSW"
-        else if deg_wind > 213.75 and deg_wind < 236.25:
+        elif deg_wind > 213.75 and deg_wind < 236.25:
             direction = " SW"
-        else if deg_wind > 236.25 and deg_wind < 258.75:
+        elif deg_wind > 236.25 and deg_wind < 258.75:
             direction = " WSW"
-        else if deg_wind > 258.75 and deg_wind < 281.25:
+        elif deg_wind > 258.75 and deg_wind < 281.25:
             direction = " W"
-        else if deg_wind > 281.25 and deg_wind < 303.75:
+        elif deg_wind > 281.25 and deg_wind < 303.75:
             direction = " WNW"
-        else if deg_wind > 303.75 and deg_wind < 326.25:
+        elif deg_wind > 303.75 and deg_wind < 326.25:
             direction = " NW"
-        else if deg_wind > 326.25 and deg_wind < 348.75:
+        elif deg_wind > 326.25 and deg_wind < 348.75:
             direction = " NNW"
         else:
             direction = " ?
