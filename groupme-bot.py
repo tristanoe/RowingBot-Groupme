@@ -113,7 +113,7 @@ def webhook():
     data = request.get_json()
     
     logmsg(data)
-
+    attach_type(data["image"])
     # Prevent the bot from acting on its own messages
     if data['name'] == BOT_INFO[data['group_id']][1]:
         return "ok", 200
