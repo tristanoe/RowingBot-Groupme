@@ -24,7 +24,7 @@ def run(data, bot_info, send):
       
     if message[1:] == '.':
         if data['name'] == 'Zach Hardin':
-            send("Is Zach making up commands again?", bot_info[0])
+            send("Is Zach making up commands again? smh", bot_info[0])
             return True
         else:
             send("{} isn't a command, sorry {}.".format(data['text'], data['name']), bot_info[0])
