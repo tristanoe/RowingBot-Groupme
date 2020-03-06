@@ -23,9 +23,14 @@ def run(data, bot_info, send):
 
         send("http://snowfence.umn.edu/Images/Wind/wind_bln1.gif", bot_info[0])
         return True
-        
-    #send(clock.timed_job(), bot_info[0])
-    #return True
+      
+    if message[1:] == '.':
+        if data['name'] == 'Zach Hardin':
+            send("Is Zach making up commands again?", bot_info[0]))
+            return True
+        else:
+            send("{} isn't a command, sorry {}.".format(data['text'], data['name']), bot_info[0])
+            return True
 
 def getFlow():
    # global flow_lcn, flow_lfk
