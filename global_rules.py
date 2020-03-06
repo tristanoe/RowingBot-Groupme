@@ -104,6 +104,6 @@ def getTemp():
             direction = str(deg_wind) + " degrees"
 
         
-    sentence_wind = "\nAir Temp:      "+ air_temp + "\nWind Speed: " + wind + direction
+    sentence_wind = "\nAir Temp:      "+ air_temp + "\nWind Speed: " + wind + direction + " (" + str(deg_wind) + ")"
     return sentence_temp + sentence_wind
  
