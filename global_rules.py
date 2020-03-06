@@ -63,7 +63,7 @@ def getTemp():
         wind = str(data_temp2["wind"]["speed"]) + "mph"
         deg_wind = data_temp2["wind"]["deg"]
         
-        if deg_wind < 11.25 or ddeg_wind > 248.75:
+        if deg_wind < 11.25 or deg_wind > 248.75:
             direction = " N"
         elif deg_wind > 11.25 and deg_wind < 33.75:
             direction = " NNE"
