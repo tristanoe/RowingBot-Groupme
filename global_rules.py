@@ -10,7 +10,7 @@ def run(data, bot_info, send):
     #image = data['image']
     message = data['text']
 
-    if message == '.help':
+    if message == '.news':
         send(help_message, bot_info[0])
         return True
 
