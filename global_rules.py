@@ -5,7 +5,7 @@ from decimal import Decimal
 
 def run(data, bot_info, send):
     help_message2 = "April 4th; Wichita: Duel\nApril 26th; Michigan: MACRA\nMay 3rd; Wichita: PACRA\nMay 22-24th; Georgia: ACRA\n\n.flow -> Rowing info\n.compass -> Compass"
-    help_message = "Announcements\n------------------\n\n NO PRACTICE UNTIL AT LEAST MARCH 23rd/n/nDues NEED to be in when we get back/n/nMarch 18-19th; Ergathon- Cancelled/nMarch 21st; Elections- Moved/n\n" + help_message2
+    help_message = "Announcements\n------------------\n NO PRACTICE UNTIL AT LEAST MARCH 23rd\n\nDues NEED to be in when we get back\n\nMarch 18-19th; Ergathon- Cancelled\nMarch 21st; Elections- Moved\n\n" + help_message2
 
     #image = data['image']
     message = data['text']
