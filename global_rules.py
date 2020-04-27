@@ -5,7 +5,7 @@ from decimal import Decimal
 
 def run(data, bot_info, send):
     help_message2 = "\n\n.flow -> Rowing info\n.compass -> Compass"
-    help_message = "Announcements\n------------------\n There will be no more practice or racing for the rest of the semester. We will find a way to do elections and other things we planned on doing. Sorry for this unfortunate situation. \n\n" + help_message2
+    help_message = "Exec Board 2020-2021\n------------------\nPresident: Chris Hardin\nVice President: Justin Spurling\nMens Captain: Grant Gollier\nWomens Captain: Carolyn Hassett\nCoxswain Captain: Brent Linneman*\nTresurer: Zach Hardin\nSecretary: Jack Campbell\nPR/Alumni Rep: Noah Johnson\nRecruitment Chair: Jimmy Dorlac\n\n" + help_message2
 
     #image = data['image']
     message = data['text']
