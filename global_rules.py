@@ -19,7 +19,7 @@ def run(data, bot_info, send):
         return True
         
     if message == '.flow':
-        send(getFlow()+getTemp(), bot_info[0])
+        send(getFlow(), bot_info[0]) # getTemp() was removed.
         return True
 
     if message == '.compass':
