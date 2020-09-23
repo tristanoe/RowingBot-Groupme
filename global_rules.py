@@ -19,7 +19,7 @@ def run(data, bot_info, send):
         return True
         
     if message == '.flow':
-        send(getFlow(), bot_info[0]) # getTemp() was removed.
+        send(getFlow() + getTemp(), bot_info[0]) # getTemp()2 was removed.
         return True
 
     if message == '.compass':
@@ -63,8 +63,8 @@ def getTemp():
         final_water = (Decimal_water * 9/5 ) + 32
         
     sentence_temp = "\nWater Temp: " + str(final_water) + " F"
-    # return sentence_temp
-            
+    return sentence_temp
+def getTemp2():
     with urllib.request.urlopen("https://openweathermap.org/data/2.5/weather?lat=38.9806&lon=-95.2429&appid=b6907d289e10d714a6e88b30761fae22&units=imperial") as url2:
         data_temp2 = json.loads(url2.read().decode())
         air_temp = str(data_temp2["main"]["temp"]) + " F"
