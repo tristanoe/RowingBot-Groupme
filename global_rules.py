@@ -13,7 +13,7 @@ def run(data, bot_info, send):
 
     if data['name'] == 'Zach Hardin':
         send("is he talking again?", bot_info[0])
-            return True
+        return True
 
     if message == '.exec':
         send(exec_message, bot_info[0])
