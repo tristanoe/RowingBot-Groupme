@@ -6,9 +6,14 @@ from decimal import Decimal
 def run(data, bot_info, send):
     help_message = "\n\n.flow -> Rowing info\n.exec -> Exec Board\n.compass -> Compass"
     exec_message = "Exec Board 2020-2021\n------------------\nPresident: Chris Hardin\nVice President: Justin Spurling\nMens Captain: Grant Gollier\nWomens Captain: Carolyn Hassett\nCoxswain Captain: Brent Linneman*\nTresurer: Zach Hardin\nSecretary: Jack Campbell\nPR/Alumni Rep: Noah Johnson\nRecruitment Chair: Jimmy Dorlac\n\n"
+    zach_message = "."
 
     #image = data['image']
     message = data['text']
+
+    if data['name'] == 'Zach Hardin':
+        send("is he talking again?", bot_info[0])
+            return True
 
     if message == '.exec':
         send(exec_message, bot_info[0])
