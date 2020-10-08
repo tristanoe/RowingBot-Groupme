@@ -11,9 +11,9 @@ def run(data, bot_info, send):
     #image = data['image']
     message = data['text']
 
-    if data['name'] == 'Zach Hardin':
-        send("is he talking again?", bot_info[0])
-        return True
+   # if data['name'] == 'Zach Hardin':
+     #   send("is he talking again?", bot_info[0])
+     #   return True
 
     if message == '.exec':
         send(exec_message, bot_info[0])
