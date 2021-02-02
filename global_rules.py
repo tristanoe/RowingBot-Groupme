@@ -11,9 +11,9 @@ def run(data, bot_info, send):
     #image = data['image']
     message = data['text']
 
-   # if data['name'] == 'Zach Hardin':
-     #   send("is he talking again?", bot_info[0])
-     #   return True
+   # if data['name'] == 'Noah Johnson':
+      #  send("Noah... come on man...", bot_info[0])
+       # return True
 
     if message == '.exec':
         send(exec_message, bot_info[0])
@@ -32,8 +32,8 @@ def run(data, bot_info, send):
         return True
  
     if message[:1] == '.':
-        if data['name'] == 'Zach Hardin':
-            send("Is Zach making up commands again? smh", bot_info[0])
+        if data['name'] == 'Noah Johnson':
+            send("Noah... come on man... we've been over this...", bot_info[0])
             return True
         else:
             send("{} isn't a command, sorry {}".format(data['text'], data['name']), bot_info[0])
