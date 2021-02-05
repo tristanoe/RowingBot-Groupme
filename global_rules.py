@@ -6,7 +6,7 @@ from decimal import Decimal
 
 def run(data, bot_info, send):
     help_message = "\n\n.flow -> Rowing info\n.exec -> Exec Board\n.compass -> Compass"
-    exec_message = "Exec Board 2020-2021\n------------------\nPresident: Chris Hardin\nVice President: Justin Spurling\nMens Captain: Grant Gollier\nWomens Captain: Carolyn Hassett\nCoxswain Captain: Brent Linneman*\nTresurer: Zach Hardin\nSecretary: Jack Campbell\nPR/Alumni Rep: Noah Johnson\nRecruitment Chair: Jimmy Dorlac\n\n"
+    exec_message = "Exec Board 2020-2021\n------------------\nPresident: Chris Hardin\nVice President: Justin Spurling\nMens Captain: Grant Gollier\nWomens Captain: Carolyn Hassett\nCoxswain Captain: Brent Linneman*\nTresurer: Zach Hardin\nSecretary: Maybe you? \nPR/Alumni Rep: Noah Johnson\nRecruitment Chair: Maybe you?\n\n"
     zach_message = "."
     lol = ['NOAHAHHA WHYY', 'seriously noah?', 'come on man.. weve been over this.. smh..', 'are you still trying?', 'try again. I dare you.', 'someone come get there mans', 'NOAAHAHA', 'Mr. Johnson, thank you for trying a command that currently doesnt exist. Maybe sometime in the near future we will have it implemented. In the meantime, get back on the erg.', 'welp.',]
     #image = data['image']
