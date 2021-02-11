@@ -9,6 +9,7 @@ def run(data, bot_info, send):
     exec_message = "Exec Board 2020-2021\n------------------\nPresident: Chris Hardin\nVice President: Justin Spurling\nMens Captain: Grant Gollier\nWomens Captain: Carolyn Hassett\nCoxswain Captain: Brent Linneman*\nTresurer: Zach Hardin\nSecretary: Maybe you? \nPR/Alumni Rep: Noah Johnson\nRecruitment Chair: Maybe you?\n\n"
     zach_message = "."
     lol = ['NOAHAHHA WHYY', 'seriously noah?', 'come on man.. weve been over this.. smh..', 'are you still trying?', 'try again. I dare you.', 'someone come get there mans', 'NOAAHAHA', 'Mr. Johnson, thank you for trying a command that currently doesnt exist. Maybe sometime in the near future we will have it implemented. In the meantime, get back on the erg.', 'welp.',]
+    answers = ["As I see it, yes","It is certain","It is decidedly so","Most likely","Outlook good","Signs point to yes","Without a doubt","Yes","Yes - definitely","You may rely on it","Reply hazy, try again","Ask again later","Better not tell you now","Cannot predict now","Concentrate and ask again","Don't count on it","My reply is no","My sources say no","Outlook not so good","Very doubtful",]
     #image = data['image']
     message = data['text']
 
@@ -31,7 +32,10 @@ def run(data, bot_info, send):
     if message == '.compass':
         send("http://snowfence.umn.edu/Images/Wind/wind_bln1.gif", bot_info[0])
         return True
- 
+    if message == '.8ball':
+        send(random.choice(answers), bot_info[0])
+        return True
+      
     if message[:1] == '.':
         if data['name'] == 'Noah Johnson':
             
