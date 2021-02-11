@@ -32,7 +32,7 @@ def run(data, bot_info, send):
     if message == '.compass':
         send("http://snowfence.umn.edu/Images/Wind/wind_bln1.gif", bot_info[0])
         return True
-    if message == '.8ball':
+    if message[0:6] == '.8ball':
         send(random.choice(answers), bot_info[0])
         return True
       
