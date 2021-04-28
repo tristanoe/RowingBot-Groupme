@@ -30,7 +30,7 @@ def run(data, bot_info, send):
         return True
 
     if message == '.compass':
-        send("http://snowfence.umn.edu/Images/Wind/wind_bln1.gif", bot_info[0])
+        send("http://www.mathsmutt.co.uk/files/Bearings_files/bear2.gif", bot_info[0])
         return True
     if message[0:6] == '.8ball':
         send(random.choice(answers), bot_info[0])
