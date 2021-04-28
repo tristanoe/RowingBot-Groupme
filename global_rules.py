@@ -49,6 +49,7 @@ def run(data, bot_info, send):
    # send(data['name'], bot_info[0])
    # return True
 
+
 def getFlow():
    # global flow_lcn, flow_lfk
     with urllib.request.urlopen("https://waterservices.usgs.gov/nwis/iv/?&sites=06891000&parameterCd=00060&format=json") as url:
@@ -74,9 +75,8 @@ def getTemp():
         final_water = (Decimal_water * 9/5 ) + 32
         
     sentence_temp = "\nWater Temp: " + str(final_water) + " F"
-    return sentence_temp
-def getTemp2():
-    with urllib.request.urlopen("https://openweathermap.org/data/2.5/weather?lat=38.9806&lon=-95.2429&appid=b6907d289e10d714a6e88b30761fae22&units=imperial") as url2:
+    
+    with urllib.request.urlopen("https://api.openweathermap.org/data/2.5/weather?lat=38.9806&lon=-95.2429&appid=3829cc2c035aa3854fc9ca50d26020c0&units=imperial") as url2:
         data_temp2 = json.loads(url2.read().decode())
         air_temp = str(data_temp2["main"]["temp"]) + " F"
         wind = str(data_temp2["wind"]["speed"]) + "mph"
@@ -119,6 +119,6 @@ def getTemp2():
             direction = str(deg_wind) + " degrees"
 
         
-    sentence_wind = "\nAir Temp:      "+ air_temp + "\nWind Speed: " + wind + direction + " (" + str(deg_wind) + ")"
+    sentence_wind = "\nAir Temp: "+ air_temp + "\nWind Speed: " + wind + direction + " (" + str(deg_wind) + ")"
     return sentence_temp + sentence_wind
  
