@@ -43,7 +43,7 @@ def run(data, bot_info, send):
             return True
     else:
         send("{} isn't a command, sorry {}".format(data['text'], data['name']), bot_info[0])
-            return True
+        return True
    # send(message[1:], bot_info[0])
    # send(message[:1], bot_info[0])
    # send(data['name'], bot_info[0])
