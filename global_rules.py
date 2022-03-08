@@ -6,7 +6,7 @@ from decimal import Decimal
 
 def run(data, bot_info, send):
     help_message = "\n\n.flow -> Rowing info\n.exec -> Exec Board\n.compass -> Compass\n.8ball -> say 8ball followed by a message"
-    exec_message = "Exec Board Spring 2022\n------------------\nPresident: Grant Hamilton\nVice President: Tristan Oestreich\nMens Captain: Noah Johnson\nWomens Captain: Svenja Horn\nCoxswain Captain: None\nTresurer: Will Doerries\nSecretary: Josh Ryan \nPR/Alumni Rep: None\nRecruitment Chair: Jude Butler\n\n"
+    exec_message = "Exec Board Spring 2022\n------------------\nPresident: Grant Hamilton\nVice President: Tristan Oestreich\nMens Captain: Noah Johnson\nWomens Captain: Svenja Horn\nCoxswain Captain: None\nTresurer: Will Doerries\nSecretary: Josh Ryan \nPR/Alumni Rep: Landyn Welch\nRecruitment Chair: Jude Butler\n\n"
     zach_message = "."
     lol = ['NOAHAHHA WHYY', 'seriously noah?', 'come on man.. weve been over this.. smh..', 'are you still trying?', 'try again. I dare you.', 'someone come get there mans', 'NOAAHAHA', 'Mr. Johnson, thank you for trying a command that currently doesnt exist. Maybe sometime in the near future we will have it implemented. In the meantime, get back on the erg.', 'welp.',]
     answers = ["As I see it, yes","It is certain","It is decidedly so","Most likely","Outlook good","Signs point to yes","Without a doubt","Yes","Yes - definitely","You may rely on it","Reply hazy, try again","Ask again later","Better not tell you now","Cannot predict now","Concentrate and ask again","Don't count on it","My reply is no","My sources say no","Outlook not so good","Very doubtful",]
